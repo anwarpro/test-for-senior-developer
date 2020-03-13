@@ -65,7 +65,7 @@
         <br/><br/>6. <a target="_blank" href="{{url('i-m-funny')}}">i-m-funny</a>. Enlisted the answers.
         <br/>&emsp;&emsp;6a. What do you think about the current condition of software development in bangladesh and how this differ from the other developed countries?
         <br/>&emsp;&emsp;&emsp;&emsp;Also put a comment how we can improve ourselves as a giant digital developed nation in this field?
-        <br/>&emsp;&emsp;6b. Two fathers & two sons went for fishing. They caught 3 fish. How its possible to distribute these 3 fish among them without piecing?
+        <br/>&emsp;&emsp;6b. Two fathers & two sons went for fishing. They caught 3 fish. How its possible to equally distribute these 3 fish among all of them without piecing and without killing any of them?
         <br/><br/>
         <br/><br/>
         <h1 class="m-b-md" style="font-size: 40px">Its done!!</h1>
