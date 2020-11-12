@@ -7,19 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{env('APP_NAME')}}</title>
 
+    <!-- Styles -->
     <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+        table{
+            margin-left: 45px;
         }
 
-        th, td {
-            padding: 5px;
-            text-align: left;
+        td{
+            border: 1px solid #eee;
+            padding: 3px;
+            text-align: center;
         }
-
-        body {
-            padding: 20px;
+        code{
+            color: #007b00;
+        }
+        a{
+            color: red;
         }
     </style>
 </head>

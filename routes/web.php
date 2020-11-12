@@ -73,3 +73,8 @@ Route::get('/second-buyer-no-eloquent', function () {
 
     return view('second-buyer-non-eloquent', compact('secondTopBuyer'));
 });
+
+Route::get('/purchase-list-eloquent', function () {
+    $buyers = Buyer::all()->sortBy('total_items');
+    return view('purchase-list', compact('buyers'));
+});
