@@ -17,9 +17,9 @@
                 <tr>
                     <td>{{$buyer->id}}</td>
                     <td>{{$buyer->name}}</td>
-                    <td>{{$buyer->diaryTaken()->sum('amount')}}</td>
-                    <td>{{ $buyer->penTaken()->sum('amount')}}</td>
-                    <td>{{$buyer->eraserTaken()->sum('amount')}}</td>
+                    <td>{{$buyer->diaryTaken}}</td>
+                    <td>{{$buyer->penTaken}}</td>
+                    <td>{{$buyer->eraserTaken}}</td>
                     <td>{{$buyer->total_items}}</td>
                 </tr>
             @endforeach

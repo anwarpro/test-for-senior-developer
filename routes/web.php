@@ -78,3 +78,25 @@ Route::get('/purchase-list-eloquent', function () {
     $buyers = Buyer::all()->sortBy('total_items');
     return view('purchase-list', compact('buyers'));
 });
+Route::get('/purchase-list-no-eloquent', function () {
+    $buyers = DB::table('buyers')
+        ->leftJoinSub("select buyer_id, SUM(amount) as sum_amount from diary_taken group by buyer_id", 'diary', function ($join) {
+            $join->on('buyers.id', '=', 'diary.buyer_id');
+        })
+        ->leftJoinSub("select buyer_id, SUM(amount) as sum_amount from pen_taken group by buyer_id", 'pen', function ($join) {
+            $join->on('buyers.id', '=', 'pen.buyer_id');
+        })
+        ->leftJoinSub("select buyer_id, SUM(amount) as sum_amount from eraser_taken group by buyer_id", 'eraser', function ($join) {
+            $join->on('buyers.id', '=', 'eraser.buyer_id');
+        })
+        ->select('buyers.*')
+        ->selectRaw('SUM(IFNULL(diary.sum_amount, 0)) as diaryTaken')
+        ->selectRaw('SUM(IFNULL(pen.sum_amount, 0)) as penTaken')
+        ->selectRaw('SUM(IFNULL(eraser.sum_amount, 0)) as eraserTaken')
+        ->selectRaw('SUM(IFNULL(diary.sum_amount,0))+SUM(IFNULL(pen.sum_amount, 0))+SUM(IFNULL(eraser.sum_amount, 0)) as total_items')
+        ->groupBy('buyers.id')
+        ->orderBy('total_items')
+        ->get();
+
+    return view('purchase-list-non-eloquent', compact('buyers'));
+});
