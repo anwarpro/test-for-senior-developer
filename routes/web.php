@@ -1,9 +1,11 @@
 <?php
 
 use App\Buyer;
+use App\Record;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,4 +101,35 @@ Route::get('/purchase-list-no-eloquent', function () {
         ->get();
 
     return view('purchase-list-non-eloquent', compact('buyers'));
+});
+
+Route::get('/record-transfer', function () {
+
+    $start = microtime(true);
+
+    $json = Storage::disk('public')->get('records.json');
+    $json = json_decode($json, true);
+
+    $parsingTime = microtime(true) - $start;
+
+
+    $insertingTime = 0;
+    $totalInserted = 0;
+
+    foreach ($json as $key => $records) {
+        if (strtolower($key) == 'records') {
+            //clear all
+            Record::truncate();
+
+            $start = microtime(true);
+            //insert all step by step
+            foreach (array_chunk($records, 1000) as $record) {
+                Record::insert($record);
+            }
+            $insertingTime = microtime(true) - $start;
+            $totalInserted = Record::count();
+        }
+    }
+
+    return view('records-transfer', compact('parsingTime', 'insertingTime', 'totalInserted'));
 });
