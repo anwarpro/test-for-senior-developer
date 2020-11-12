@@ -1,5 +1,7 @@
 <?php
 
+use App\Buyer;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/second-buyer-eloquent', function () {
+    //second buyer using eloquent
+    $secondTopBuyer = Buyer::all()
+        ->sortBy('total_items', null, true)
+        ->get(1);
+    
+    return view('second-buyer-eloquent', compact('secondTopBuyer'));
 });
