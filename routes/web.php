@@ -137,3 +137,7 @@ Route::get('/record-transfer', function () {
 Route::get('/define-callback-js', function () {
     return view('define-callback');
 });
+
+Route::get('/animation', function () {
+    return view('animation');
+});

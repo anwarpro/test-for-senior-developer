@@ -37,6 +37,9 @@
             color: red;
         }
     </style>
+
+    @stack('css')
+
 </head>
 <body>
 @yield('content')
