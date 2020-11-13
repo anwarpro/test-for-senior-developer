@@ -133,3 +133,7 @@ Route::get('/record-transfer', function () {
 
     return view('records-transfer', compact('parsingTime', 'insertingTime', 'totalInserted'));
 });
+
+Route::get('/define-callback-js', function () {
+    return view('define-callback');
+});

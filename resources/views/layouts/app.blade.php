@@ -18,24 +18,30 @@
             margin: 0;
             padding: 10px;
         }
-        table{
+
+        table {
             margin-left: 45px;
         }
 
-        td{
+        td {
             border: 1px solid #eee;
             padding: 3px;
             text-align: center;
         }
-        code{
+
+        code {
             color: #007b00;
         }
-        a{
+
+        a {
             color: red;
         }
     </style>
 </head>
 <body>
 @yield('content')
+
+@stack('js')
+
 </body>
 </html>
