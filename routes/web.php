@@ -161,3 +161,5 @@ Route::get('/map-js', function () {
 Route::get('/reduce-js', function () {
     return view('array-actions.reduce-js');
 });
+
+Route::view('/i-m-funny', 'i-am-funny');
