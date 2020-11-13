@@ -4,8 +4,19 @@
     <section id="second-buyer-elo">
         <div>
             <h3>6a</h3>
-            <p></p>
+            <p>
+                Current software market is expanding and the demand of software developers are increasing day by day.
+                According to Salt.study Europe needs 500 000 new technology professionals by 2020 which is increasing
+                exponentially. Because of this demand technology Companies are moving to new strategy, they are
+                recruiting remote professionals, what open a new window for the developers in Bangladesh. We can take
+                full advantage from European of this demand by understanding their requirements.
+            </p>
+            <p>
+                We should develop a Strong and trustworthy relation with european. Together We can begin a new era like
+                Garments industry.
+            </p>
         </div>
+        <hr style="border-top: 1px dashed gray;">
         <div>
             <h3>6b</h3>
             <p>
