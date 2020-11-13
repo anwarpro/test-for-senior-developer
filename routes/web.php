@@ -141,3 +141,23 @@ Route::get('/define-callback-js', function () {
 Route::get('/animation', function () {
     return view('animation');
 });
+
+Route::get('/sort-js', function () {
+    return view('array-actions.sort-js');
+});
+
+Route::get('/foreach-js', function () {
+    return view('array-actions.foreach-js');
+});
+
+Route::get('/filter-js', function () {
+    return view('array-actions.filter-js');
+});
+
+Route::get('/map-js', function () {
+    return view('array-actions.map-js');
+});
+
+Route::get('/reduce-js', function () {
+    return view('array-actions.reduce-js');
+});

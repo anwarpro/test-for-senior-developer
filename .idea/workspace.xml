@@ -26,7 +26,7 @@
   <component name="ChangeListManager">
     <list default="true" id="08dbbebf-e9ae-47bc-a28b-4f0484ac1a75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/define-callback.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/define-callback.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +151,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/array-actions" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -164,6 +164,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/array-actions" />
       <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
@@ -185,7 +186,7 @@
       <workItem from="1605208602397" duration="1715000" />
       <workItem from="1605210930396" duration="1208000" />
       <workItem from="1605213131860" duration="13092000" />
-      <workItem from="1605254352147" duration="630000" />
+      <workItem from="1605254352147" duration="4685000" />
     </task>
     <servers />
   </component>
